@@ -2,7 +2,7 @@ import asyncio
 
 import pytest
 
-from token_budget import (
+from context_budget import (
     DEFAULT_CONTEXT_TOKENS,
     content_text,
     context_limits_for,

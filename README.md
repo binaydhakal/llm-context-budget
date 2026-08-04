@@ -1,7 +1,7 @@
-# token-budget
+# llm-context-budget
 
-[![PyPI](https://img.shields.io/pypi/v/token-budget)](https://pypi.org/project/token-budget/)
-[![license](https://img.shields.io/pypi/l/token-budget)](./LICENSE)
+[![PyPI](https://img.shields.io/pypi/v/llm-context-budget)](https://pypi.org/project/llm-context-budget/)
+[![license](https://img.shields.io/pypi/l/llm-context-budget)](./LICENSE)
 
 **Fit chat history into any model's context window.**
 
@@ -10,7 +10,7 @@ Every chat app eventually writes the same code: estimate tokens, keep recent tur
 Zero dependencies. No AI inside — the summarizer is a callback you can point at your model, with a deterministic extractive fallback built in. Messages are plain dicts in the OpenAI/Anthropic shape, multimodal content included. Python sibling of [`@yanib/context-budget`](https://github.com/binaydhakal/context-budget) (npm).
 
 ```python
-from token_budget import pack_messages
+from context_budget import pack_messages
 
 result = pack_messages(
     history,                                   # [{"role": ..., "content": ...}, ...]
@@ -38,8 +38,10 @@ result = await apack_messages(
 ## Install
 
 ```sh
-pip install token-budget
+pip install llm-context-budget
 ```
+
+The import name is `context_budget` — matching the JS sibling. (PyPI's name-similarity rules block both `context-budget` and `token-budget` as distribution names; the code doesn't care.)
 
 ## How it packs
 
@@ -67,7 +69,7 @@ Also exported: `create_char_estimator(ratio)`, `truncate_to_tokens(text, max, es
 Estimates are estimates. When the provider still throws, detect it and retry aggressively — half the verbatim window:
 
 ```python
-from token_budget import is_context_overflow_error, pack_messages
+from context_budget import is_context_overflow_error, pack_messages
 
 try:
     return call_model(result.messages)

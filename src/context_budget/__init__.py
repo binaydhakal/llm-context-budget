@@ -1,4 +1,4 @@
-"""token-budget -- fit chat history into any model's context window.
+"""llm-context-budget -- fit chat history into any model's context window.
 
 Zero dependencies, no AI inside; bring your own summarizer if you want one.
 Python sibling of ``@yanib/context-budget`` (npm).

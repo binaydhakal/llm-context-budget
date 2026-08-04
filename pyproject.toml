@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "token-budget"
+name = "llm-context-budget"
 version = "0.1.0"
 description = "Fit chat history into any model's context window: token estimation, sliding-window packing with a running summary, and overflow detection. Zero dependencies, no AI inside."
 readme = "README.md"
@@ -41,12 +41,12 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/binaydhakal/token-budget"
-Repository = "https://github.com/binaydhakal/token-budget"
-Issues = "https://github.com/binaydhakal/token-budget/issues"
+Homepage = "https://github.com/binaydhakal/llm-context-budget"
+Repository = "https://github.com/binaydhakal/llm-context-budget"
+Issues = "https://github.com/binaydhakal/llm-context-budget/issues"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/token_budget"]
+packages = ["src/context_budget"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
