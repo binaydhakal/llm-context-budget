@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "token-budget"
+version = "0.1.0"
+description = "Fit chat history into any model's context window: token estimation, sliding-window packing with a running summary, and overflow detection. Zero dependencies, no AI inside."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Binaya Dhakal", email = "binaydhakal35@gmail.com" }]
+requires-python = ">=3.9"
+keywords = [
+  "llm",
+  "tokens",
+  "context-window",
+  "chat",
+  "token-counting",
+  "truncation",
+  "summarization",
+  "sliding-window",
+  "prompt",
+  "context-management",
+  "openai",
+  "anthropic",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/binaydhakal/token-budget"
+Repository = "https://github.com/binaydhakal/token-budget"
+Issues = "https://github.com/binaydhakal/token-budget/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/token_budget"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
