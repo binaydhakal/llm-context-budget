@@ -1,5 +1,6 @@
 # llm-context-budget
 
+[![CI](https://github.com/binaydhakal/llm-context-budget/actions/workflows/ci.yml/badge.svg)](https://github.com/binaydhakal/llm-context-budget/actions/workflows/ci.yml)
 [![PyPI](https://img.shields.io/pypi/v/llm-context-budget)](https://pypi.org/project/llm-context-budget/)
 [![license](https://img.shields.io/pypi/l/llm-context-budget)](./LICENSE)
 
